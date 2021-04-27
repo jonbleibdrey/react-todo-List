@@ -10,6 +10,7 @@ function App() {
       <h1>Fun things to-do list</h1>
     </header>
     <Form/>
+    <TodoList/>
     </div>
   );
 }
