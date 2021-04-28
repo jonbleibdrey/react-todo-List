@@ -1,8 +1,7 @@
-import React,{useState} from "react";
-
+import React, { useState } from "react";
 
 const Todo = ({ text, todos, todo, setTodos, setInputText, inputText }) => {
-  const [update, setUpdate] = useState(text)
+  const [update, setUpdate] = useState(text);
   const [onEdit, setOnEdit] = useState(false);
 
   const deleteHandler = () => {
@@ -28,7 +27,7 @@ const Todo = ({ text, todos, todo, setTodos, setInputText, inputText }) => {
   };
 
   const updateHandler = (e) => {
-    console.log("in update")
+    console.log("in update");
     e.preventDefault();
     setTodos(
       todos.map((item) => {
@@ -41,14 +40,14 @@ const Todo = ({ text, todos, todo, setTodos, setInputText, inputText }) => {
         return item;
       })
     );
-    setOnEdit(false)
+    setOnEdit(false);
   };
 
   return (
     <>
       {onEdit ? (
         <form onSubmit={updateHandler}>
-          <input type="text" onChange={inputTextHandler} value={update}/>
+          <input type="text" onChange={inputTextHandler} value={update} />
           <button type="submit">update</button>
         </form>
       ) : (
@@ -56,7 +55,7 @@ const Todo = ({ text, todos, todo, setTodos, setInputText, inputText }) => {
           <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
             {text}
           </li>
-          <button onClick={()=> setOnEdit(true)} className="update-btn">
+          <button onClick={() => setOnEdit(true)} className="update-btn">
             <i className="fas fa-pen-square"></i>
           </button>
           <button onClick={completeHandler} className="complete-btn">
