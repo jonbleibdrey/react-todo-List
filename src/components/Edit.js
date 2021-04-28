@@ -1,12 +1,13 @@
-import React from 'react'
+import React,{useContext} from 'react'
 
-const Edit = ({setInputText, todos, todo, inputText, setTodos}) => {
+const Edit = ({inputText, setInputText,  todos,  setTodos}) => {
+
     const handleChange = (e) => {
         setInputText(e.target.value)
     }
     const updateHandler = (e) => {
         e.preventDefault()
-        setTodos()
+        setTodos(inputText)
     }
 
     return (

@@ -1,7 +1,7 @@
 import React from "react";
 import Todo from "./Todo";
 
-const TodoList = ({ todos, setTodos, inputText, onEdit, setOnEdit }) => {
+const TodoList = ({ todos, setTodos, inputText, setInputText  }) => {
   console.log(todos);
   return (
     <div className="todo-container">
@@ -14,8 +14,8 @@ const TodoList = ({ todos, setTodos, inputText, onEdit, setOnEdit }) => {
             key={todo.id}
             completed={todo.completed}
             todo={todo}
-            onEdit={onEdit}
-            setOnEdit={setOnEdit}
+            setInputText={setInputText}
+            inputText={inputText}
           />
         ))}
       </ul>

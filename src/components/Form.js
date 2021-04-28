@@ -13,6 +13,7 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
       { text: inputText, completed: false, id: Math.random() * 1000 },
     ]);
     setInputText("");
+    
   };
 
   return (
@@ -26,15 +27,16 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
       <button onClick={addTodoHandler} className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
-      {/* <div className="select">
-        <select name="todos" className="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
-      </div> */}
     </form>
   );
 };
 
 export default Form;
+
+// {/* <div className="select">
+//   <select name="todos" className="filter-todo">
+//     <option value="all">All</option>
+//     <option value="completed">Completed</option>
+//     <option value="uncompleted">Uncompleted</option>
+//   </select>
+// </div> */}
