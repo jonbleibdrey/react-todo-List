@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import Edit from "./components/Edit";
+
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
 
@@ -13,12 +15,23 @@ function App() {
       <header>
         <h1>Fun things to-do list</h1>
       </header>
-      <Form
-        todos={todos}
-        inputText={inputText}
-        setTodos={setTodos}
-        setInputText={setInputText}
-      />
+      {onEdit ? (
+        <Edit
+          setInputText={setInputText}
+          todos={todos}
+          inputText={inputText}
+          setTodos={setTodos}
+          
+        />
+      ) : (
+        <Form
+          todos={todos}
+          inputText={inputText}
+          setTodos={setTodos}
+          setInputText={setInputText}
+        />
+      )}
+
       <TodoList
         onEdit={onEdit}
         setOnEdit={setOnEdit}

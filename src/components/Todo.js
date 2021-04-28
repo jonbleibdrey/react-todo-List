@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Todo = ({ text, completed, todos, todo, setTodos, onEdit, setOnEdit }) => {
 
     
@@ -21,26 +22,13 @@ const Todo = ({ text, completed, todos, todo, setTodos, onEdit, setOnEdit }) => 
     );
   };
 
-  const updateHandler = () => {
-    setTodos(
-      todos.map((item) => {
-        if (item.id === todo.id) {
-          return {
-            ...item,
-            text: "",
-          };
-        }
-        return item;
-      })
-    );
-  };
 
 
 
   return (
     <div className="todo">
       <li className={`todo-item ${todo.completed ? "completed": ""}`}>{text}</li>
-      <button onClick={updateHandler} className="update-btn">
+      <button onClick={() => setOnEdit(true)} className="update-btn">
       <i className="fas fa-pen-square"></i>
       </button>
       <button onClick={completeHandler} className="complete-btn">
