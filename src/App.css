@@ -66,7 +66,7 @@
   }
   
   .trash-btn,
-  .complete-btn {
+  .complete-btn,.update-btn {
     background: #ff6f47;
     color: white;
     border: none;

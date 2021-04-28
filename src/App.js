@@ -6,14 +6,26 @@ import TodoList from "./components/TodoList";
 function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [onEdit, setOnEdit] = useState(false);
 
   return (
     <div className="App">
       <header>
         <h1>Fun things to-do list</h1>
       </header>
-      <Form todos={todos} inputText={inputText} setTodos={setTodos} setInputText={setInputText}/>
-      <TodoList todos={todos} inputText={inputText}/>
+      <Form
+        todos={todos}
+        inputText={inputText}
+        setTodos={setTodos}
+        setInputText={setInputText}
+      />
+      <TodoList
+        onEdit={onEdit}
+        setOnEdit={setOnEdit}
+        todos={todos}
+        setTodos={setTodos}
+        inputText={inputText}
+      />
     </div>
   );
 }
