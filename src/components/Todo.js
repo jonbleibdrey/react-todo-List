@@ -51,7 +51,7 @@ const Todo = ({ todos, setTodos, todo, text }) => {
         </form>
       ) : (
         <div className="todo">
-          <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+          <li className={`${todo.completed ? "completed" : ""}`} style={{ padding: "0rem 0.5rem"}}>
             {text}
           </li>
           <button onClick={() => setOnEdit(true)} className="update-btn">

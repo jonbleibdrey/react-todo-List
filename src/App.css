@@ -77,9 +77,6 @@
   .complete-btn {
     background: rgb(11, 212, 162);
   }
-  .todo-item {
-    padding: 0rem 0.5rem;
-  }
   
   .fa-trash,
   .fa-check {
