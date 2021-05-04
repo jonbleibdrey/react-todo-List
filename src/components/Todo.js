@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-const Todo = ({ text, todos, todo, setTodos, setInputText, inputText }) => {
+const Todo = ({ todos, setTodos, todo, text }) => {
   const [update, setUpdate] = useState(text);
   const [onEdit, setOnEdit] = useState(false);
 
   const deleteHandler = () => {
-    setTodos(todos.filter((el) => el.id !== todo.id));
+    setTodos(todos.filter((elem) => elem.id !== todo.id));
   };
 
   const completeHandler = () => {
@@ -27,7 +27,6 @@ const Todo = ({ text, todos, todo, setTodos, setInputText, inputText }) => {
   };
 
   const updateHandler = (e) => {
-    console.log("in update");
     e.preventDefault();
     setTodos(
       todos.map((item) => {
@@ -48,7 +47,7 @@ const Todo = ({ text, todos, todo, setTodos, setInputText, inputText }) => {
       {onEdit ? (
         <form onSubmit={updateHandler}>
           <input type="text" onChange={inputTextHandler} value={update} />
-          <button type="submit">update</button>
+          <button type="submit"><i className="fas fa-pen-square"></i></button>
         </form>
       ) : (
         <div className="todo">

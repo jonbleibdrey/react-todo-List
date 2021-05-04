@@ -30,11 +30,3 @@ const Form = ({ setInputText, setTodos, todos, inputText }) => {
 };
 
 export default Form;
-
-// {/* <div className="select">
-//   <select name="todos" className="filter-todo">
-//     <option value="all">All</option>
-//     <option value="completed">Completed</option>
-//     <option value="uncompleted">Uncompleted</option>
-//   </select>
-// </div> */}

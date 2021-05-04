@@ -8,14 +8,14 @@ const TodoList = ({ todos, setTodos, inputText, setInputText }) => {
       <ul className="todo-list">
         {todos.map((todo) => (
           <Todo
+            key={todo.id}
             todos={todos}
             setTodos={setTodos}
-            text={todo.text}
-            key={todo.id}
-            completed={todo.completed}
-            todo={todo}
             setInputText={setInputText}
             inputText={inputText}
+            todo={todo}
+            text={todo.text}
+            completed={todo.completed}
           />
         ))}
       </ul>
