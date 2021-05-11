@@ -47,11 +47,16 @@ const Todo = ({ todos, setTodos, todo, text }) => {
       {onEdit ? (
         <form onSubmit={updateHandler}>
           <input type="text" onChange={inputTextHandler} value={update} />
-          <button type="submit"><i className="fas fa-pen-square"></i></button>
+          <button type="submit">
+            <i className="fas fa-pen-square"></i>
+          </button>
         </form>
       ) : (
         <div className="todo">
-          <li className={`${todo.completed ? "completed" : ""}`} style={{ padding: "0rem 0.5rem"}}>
+          <li
+            className={`${todo.completed ? "completed" : ""}`}
+            style={{ padding: "0rem 0.5rem" }}
+          >
             {text}
           </li>
           <button onClick={() => setOnEdit(true)} className="update-btn">
